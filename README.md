@@ -6,7 +6,7 @@ Este repositório foi criado para preservar os documentos gerados  pelo grupo 3 
 
 O trabalho desenvolvido se trata de um projeto de desenvolvimento e implementação de um sistema de informação que tem como objetivo aumentar o grau de conformidade de empresas de pequeno porte com a [Lei Geral de Proteção de Dados Pessoais](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709compilado.htm) do Brasil.
 
-# 01. Protótipo SIA Javascript React Front-End
+# 01. Protótipo SIA (Demo)
 
 O protótipo tem como objetivo possibilitar uma interface simples de interação com a calculadora de Nível de Maturidade.
 

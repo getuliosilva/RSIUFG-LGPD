@@ -14,7 +14,7 @@ O protótipo tem como objetivo possibilitar uma interface simples de interação
 
 Sendo essa apenas uma das partes da solução final.
 
-# Arquitetura Técnica
+# 02. Arquitetura Técnica
 
 Documento contendo:
 

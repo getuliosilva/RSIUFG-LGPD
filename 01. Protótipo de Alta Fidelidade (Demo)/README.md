@@ -5,3 +5,5 @@ O protótipo tem como objetivo possibilitar uma interface simples de interação
 É feito uma somatória de pontos baseado nas respostas (cada uma com um determinado peso - grau de importância) e com isso calculado o grau aproximado de maturidade da sua organização.
 
 Sendo essa apenas uma das partes da solução final.
+
+Link para acesso do Protótipo com deploy via Vercel: https://sia-beta.vercel.app/

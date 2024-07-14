@@ -1,4 +1,4 @@
-# 04. Arquitetura de negócio
+# Arquitetura de negócio
 
 Documento contendo:
 

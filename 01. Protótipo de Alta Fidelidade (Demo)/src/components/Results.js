@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import maturidadeImage from '../utils/maturidade.png';
+import proximoNivelSeta from '../utils/icons8-seta-longa-abaixo-64.png';
+import Tabela from '../components/Tabela'
 import '../App.css';
 
 const Results = ({ totalScore, categoryScores, maturityLevel, responses, onBack }) => {
@@ -14,6 +15,9 @@ const Results = ({ totalScore, categoryScores, maturityLevel, responses, onBack 
         if (score <= 171) return 80 + ((score - 161) / (171 - 161)) * 20;
         return 0;
     };
+    // Define os níveis que serão exibidos na tabela
+    const currentLevel = Math.floor(maturityLevel); // Nível atual
+    const nextLevel = currentLevel + 1; // Próximo nível
 
     const formatQuestion = (question) => {
         const match = question.match(/Seção \d+ - (.+)\?/);
@@ -248,26 +252,9 @@ const Results = ({ totalScore, categoryScores, maturityLevel, responses, onBack 
 
     return (
         <div className='result-section'>
-            <h2>Resultados</h2>
             <p className={`nivel-maturidade nivel-maturidade-${maturityLevel}`}>
                 Nível de maturidade da organização: <strong>{maturityLevel}</strong>
             </p>
-            <p>Pontuação total: <strong>{totalScore}</strong></p>
-
-            <h3>Pontuação por categoria:</h3>
-            <ul>
-                {Object.entries(categoryScores).map(([category, score]) => (
-                    <li key={category}>{category}: {score}</li>
-                ))}
-            </ul>
-
-            <h3>Requisitos esperados em cada nível (por atributo):</h3>
-            <img
-                src={maturidadeImage}
-                alt="regua-maturidade"
-                style={{ maxWidth: '100%', height: 'auto' }}
-            />
-
             <h3>Regua de referência pontuação / nível de maturidade:</h3>
             <div className="ruler-container">
                 <div className="ruler-titles">
@@ -286,11 +273,36 @@ const Results = ({ totalScore, categoryScores, maturityLevel, responses, onBack 
                     <div className="ruler-indicator" style={{ left: `${calculatePosition(totalScore)}%` }}></div>
                 </div>
             </div>
+            <p>Pontuação total: <strong>{totalScore}</strong></p>
 
-            <div className={`timeline ${onlyCompleted || onlyPending ? 'row-layout' : ''}`}>
+            <h3>Pontuação obtida por categoria do formulário:</h3>
+            <ul>
+                {Object.entries(categoryScores).map(([category, score]) => (
+                    <li key={category}>{category}: {score}</li>
+                ))}
+            </ul>
+            <div className="separador"></div>
+            <h2 style={{ marginTop: "50px" }}>Sugestão de revisão de requisitos (por atributo):</h2>
+
+            <h3>Requisitos esperados para o nível de conformidade atual</h3>
+            <Tabela nivelDesejado={currentLevel} />
+
+            {currentLevel < 5 && (
+                <>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <img src={proximoNivelSeta} alt="Seta" />
+                    </div>
+                    <h3>Requisitos esperados para que sua organização alcance o próximo nível</h3>
+                    <Tabela nivelDesejado={nextLevel} />
+                </>
+            )}
+            <div className="separador"></div>
+            <h2>Etapas gerais da adequação</h2>
+            <p style={{ textAlign: 'center', fontStyle: 'italic', marginBottom: "50px" }}>Clique em uma etapa para obter informações específicas</p>
+            <div className={`timelineetapas ${onlyCompleted || onlyPending ? 'row-layout' : ''}`}>
                 {onlyCompleted && (
-                    <div className="timeline-item completed full-width">
-                        <div className="timeline-content">
+                    <div className="timelineetapas-item completed full-width">
+                        <div className="timelineetapas-content">
                             <h3>Etapas realizadas: {responses.yes.length}</h3>
                             <ul>
                                 {responses.yes.map(({ id, question }, index) => (
@@ -308,8 +320,8 @@ const Results = ({ totalScore, categoryScores, maturityLevel, responses, onBack 
                 )}
 
                 {onlyPending && (
-                    <div className="timeline-item pending full-width">
-                        <div className="timeline-content">
+                    <div className="timelineetapas-item pending full-width">
+                        <div className="timelineetapas-content">
                             <h3>Etapas pendentes: {sortedPendingQuestions.length}</h3>
                             <ul>
                                 {sortedPendingQuestions.map(({ id, question }, index) => (
@@ -328,8 +340,8 @@ const Results = ({ totalScore, categoryScores, maturityLevel, responses, onBack 
 
                 {!onlyCompleted && !onlyPending && (
                     <>
-                        <div className="timeline-item completed">
-                            <div className="timeline-content">
+                        <div className="timelineetapas-item completed">
+                            <div className="timelineetapas-content">
                                 <h3>Etapas realizadas: {responses.yes.length}</h3>
                                 <ul>
                                     {responses.yes.map(({ id, question }, index) => (
@@ -345,10 +357,10 @@ const Results = ({ totalScore, categoryScores, maturityLevel, responses, onBack 
                             </div>
                         </div>
 
-                        <div className="timeline-separator"></div>
+                        <div className="timelineetapas-separator"></div>
 
-                        <div className="timeline-item pending">
-                            <div className="timeline-content">
+                        <div className="timelineetapas-item pending">
+                            <div className="timelineetapas-content">
                                 <h3>Etapas pendentes: {sortedPendingQuestions.length}</h3>
                                 <ul>
                                     {sortedPendingQuestions.map(({ id, question }, index) => (

@@ -1,0 +1,133 @@
+/* Suporte.css */
+
+.suporte-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Ajuste a altura conforme necessário */
+}
+
+.suporte-container-header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    /* Cor de fundo para garantir visibilidade */
+    z-index: 1;
+    /* Garante que o header fique acima do conteúdo rolável */
+    font-size: 18px;
+    /* Reduz um pouco o tamanho do header */
+    font-weight: bold;
+    margin-bottom: 5px;
+
+    align-items: right;
+    justify-content: flex-end;
+    width: 80%;
+    max-width: 1000px;
+    /* Ajuste a altura conforme necessário */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    /* Menos margem inferior para um visual mais compacto */
+}
+
+
+
+.suporte-container-chat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    width: 80%;
+    max-width: 1000px;
+    height: 80vh;
+    /* Ajuste a altura conforme necessário */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* Adicionando overflow-y para controlar o scroll vertical */
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+
+}
+
+
+.suporte-container-chat-message {
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 5px;
+    text-align: right;
+    /* Alinha o texto à direita */
+
+}
+
+.align-right {
+
+    /* Para ocupar todo o espaço horizontal à direita */
+    text-align: right;
+    /* Garante que o texto fique alinhado à direita */
+}
+
+.suporte-container-empty-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.suporte-container-empty-chat img {
+    width: 500px;
+    /* Defina a largura desejada */
+    height: auto;
+    /* Altura automática para manter a proporção */
+}
+
+.suporte-container-message-input {
+    /* Ajuste a largura conforme necessário */
+    display: flex;
+    position: sticky;
+    top: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.suporte-container-message-input input[type="text"] {
+    flex: 1;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.suporte-container-message-input:hover {
+    border: 1px solid #007bff;
+}
+
+
+.suporte-container-message-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    display: flex-end;
+    padding: 8px 16px;
+    /* Reduzindo o padding do botão */
+    width: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: auto 10px;
+    transition: background-color 0.3s ease;
+}
+
+.suporte-container-message-input button:hover {
+    background-color: #0056b3;
+}
+
+.suporte-container-chat-message-timestamp {
+    font-size: 12px;
+    color: #888;
+}

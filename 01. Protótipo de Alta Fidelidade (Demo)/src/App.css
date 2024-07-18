@@ -52,13 +52,15 @@ h1 {
 }
 
 form {
+  position: relative;
   background-color: #fff;
-  max-width: 700px;
-  margin: 20px auto;
+  max-width: 50%;
+  margin: -15px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .radiogeral {
   background-color: #ddd;
@@ -105,13 +107,52 @@ form {
   position: relative;
   background-color: #fff;
   max-width: 70%;
-  margin: 20px auto;
+  margin: -15px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
+.default-header {
+  max-width: 70%;
+  margin: 20px auto;
+  margin-top: 35px;
+  background-color: #ffffff;
+  /* Cor de fundo para garantir visibilidade */
+
+  /* Garante que o header fique acima do conteúdo rolável */
+  font-size: 18px;
+  /* Reduz um pouco o tamanho do header */
+  font-weight: bold;
+  align-items: right;
+  justify-content: flex-end;
+  /* Ajuste a altura conforme necessário */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0 20px;
+  background-color: #ffffff;
+  /* Menos margem inferior para um visual mais compacto */
+}
+.form-header {
+  max-width: 50%;
+  margin: 20px auto;
+  margin-top: 35px;
+  background-color: #ffffff;
+  /* Cor de fundo para garantir visibilidade */
+
+  /* Garante que o header fique acima do conteúdo rolável */
+  font-size: 18px;
+  /* Reduz um pouco o tamanho do header */
+  font-weight: bold;
+  align-items: right;
+  justify-content: flex-end;
+  /* Ajuste a altura conforme necessário */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0 20px;
+  background-color: #ffffff;
+  /* Menos margem inferior para um visual mais compacto */
+}
 .result-section p {
   margin-top: 30px;
 
@@ -212,7 +253,7 @@ button {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #6200ea;
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -222,7 +263,7 @@ button {
 }
 
 button:hover {
-  background-color: #3700b3;
+  background-color: #0056b3;
 }
 
 .ruler-container {
@@ -361,47 +402,57 @@ button:hover {
 }
 
 /* Estilo para o container geral da timeline */
-.timeline {
+.timelineetapas {
   display: flex;
   flex-direction: column;
   /* Por padrão, a timeline é uma coluna */
 }
 
 /* Estilo para a timeline em layout de linha */
-.timeline.row-layout {
+.timelineetapas.row-layout {
   flex-direction: row;
 }
 
 /* Estilo para cada item da timeline */
-.timeline-item {
+.timelineetapas-item {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
 }
 
+/* Tabela.css ou outro arquivo CSS */
+.separador {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 40px 0;
+  /* Espaçamento superior e inferior de 20px */
+}
+
+
 
 /* Estilo para separador entre as etapas */
-.timeline-separator {
+.timelineetapas-separator {
   width: 1px;
   background-color: #ccc;
   margin: 0 10px;
 }
 
 /* Estilo para item de etapas realizadas */
-.timeline-item.completed {
+.timelineetapas-item.completed {
   background-color: #e0f7fa;
   /* Exemplo de cor de fundo */
 }
 
 /* Estilo para item de etapas pendentes */
-.timeline-item.pending {
+.timelineetapas-item.pending {
   background-color: #fffcef;
   /* Exemplo de cor de fundo */
 }
 
 /* Estilo para largura total */
-.timeline-item.full-width {
+.timelineetapas-item.full-width {
   flex: 1;
   /* Ocupa todo o espaço disponível */
 }
@@ -444,4 +495,189 @@ button:hover {
 
 .suggestion-popup-content li {
   margin-top: 15px;
+}
+
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 120px;
+  /* Largura minimizada */
+  background-color: #ffffff;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  transition: width 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar:hover {
+  width: 200px;
+  /* Largura expandida */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.sidebar ul li:hover {
+  background-color: #ececec;
+  padding-left: 10px;
+  transition: 0.3s;
+}
+
+.sidebar ul li.active {
+  background-color: #007bff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.content {
+  margin-left: 150px;
+  /* Largura da sidebar + 20px de padding */
+  padding: 20px;
+  width: calc(100% - 150px);
+  transition: margin-left 0.3s;
+}
+
+.sidebar:hover~.content {
+  margin-left: 220px;
+  /* Largura expandida da sidebar + 20px de padding */
+  width: calc(100% - 220px);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.login-container form div {
+  margin-bottom: 15px;
+}
+
+.login-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.user-type {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-type label {
+  margin-bottom: 5px;
+}
+
+/* CourseCard.css */
+
+.course-card {
+  display: inline-block;
+  /* Faz com que os cards se comportem como elementos inline */
+  width: calc(33.33% - 20px);
+  /* Define a largura dos cards */
+  margin: 20px;
+  vertical-align: top;
+  /* Alinha os cards ao topo para evitar desalinhamentos */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  max-width: 300px;
+}
+
+.cursos-container {
+  position: relative;
+  background-color: #007bff0a;
+  max-width: 70%;
+  margin: -15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.user-charts-container {
+  position: relative;
+  background-color: #007bff0a;
+  max-width: 70%;
+  margin: -15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.timeline-container {
+  position: relative;
+  background-color: #007bff0a;
+  max-width: 70%;
+  margin: -15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.course-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.course-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.sair-button {
+  margin-top: auto;
+  background-color: #cf5a2c;
+  /* Adiciona estilo de lista removido */
 }

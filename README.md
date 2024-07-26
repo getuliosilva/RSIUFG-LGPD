@@ -19,22 +19,22 @@ Sendo essa apenas uma das partes da solução final.
 
 ### 02. Arquitetura Técnica
 
-[Documento](https://github.com/getuliosilva/RSIUFG-LGPD/blob/ba059b575ffbab5c2b6381dc9f354e61b171be0c/02.%20Arquitetura%20T%C3%A9cnica/Arquitetura%20T%C3%A9cnica.pdf) contendo:
+[Documento](https://github.com/getuliosilva/RSIUFG-LGPD/blob/2ca12a11fdb9ebc67cdaebd7412212d181943330/02.%20Arquitetura%20T%C3%A9cnica/Arquitetura%20T%C3%A9cnica.pdf) contendo:
 
 - Descrição dos aspectos funcionais e não-funcionais do sistema;
 - Tecnologias utilizadas em seu desenvolvimento;
-- Diagrama de Arquitetura (também disponível como [arquivo JPG](https://github.com/getuliosilva/RSIUFG-LGPD/blob/ba059b575ffbab5c2b6381dc9f354e61b171be0c/02.%20Arquitetura%20T%C3%A9cnica/SIA%20-%20Diagrama%20-%20Arquitetura%20T%C3%A9cnica.jpg) em separado).
+- Diagrama de Arquitetura (também disponível como [arquivo JPG](https://github.com/getuliosilva/RSIUFG-LGPD/blob/2ca12a11fdb9ebc67cdaebd7412212d181943330/02.%20Arquitetura%20T%C3%A9cnica/SIA%20-%20Diagrama%20-%20Arquitetura%20T%C3%A9cnica.jpg) em separado).
 
 ### 03. Roadmap
 
-[Documento](https://github.com/getuliosilva/RSIUFG-LGPD/blob/ba059b575ffbab5c2b6381dc9f354e61b171be0c/03.%20Roadmap/Roadmap.pdf) contendo:
+[Documento](https://github.com/getuliosilva/RSIUFG-LGPD/blob/2ca12a11fdb9ebc67cdaebd7412212d181943330/03.%20Roadmap/Roadmap.pdf) contendo:
 
 - Detalhamento das fases de evolução da solução proposta
 - Stakeholders
 
 ### 04. Arquitetura de Negócio
 
-[Documento](https://github.com/getuliosilva/RSIUFG-LGPD/blob/ba059b575ffbab5c2b6381dc9f354e61b171be0c/04.%20Arquitetura%20de%20neg%C3%B3cio/Arquitetura%20de%20nego%CC%81cio%20-%20SIA.docx) contendo:
+[Documento](https://github.com/getuliosilva/RSIUFG-LGPD/blob/2ca12a11fdb9ebc67cdaebd7412212d181943330/04.%20Arquitetura%20de%20neg%C3%B3cio/Arquitetura%20de%20neg%C3%B3cio%20-%20SIA.pdf) contendo:
 
 - Motivação
 - Necessidade
@@ -44,3 +44,7 @@ Sendo essa apenas uma das partes da solução final.
 - Principais funcionalidades do sistema
 - Artefatos produzidos
 - Análise de Mercado
+
+### 05. Relatório Final
+
+[Acesse o PDF com o Relatório Final](https://github.com/getuliosilva/RSIUFG-LGPD/blob/2ca12a11fdb9ebc67cdaebd7412212d181943330/Relatorio_ResidenciaSI_Squad3.pdf)
